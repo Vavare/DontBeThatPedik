@@ -92,7 +92,7 @@ abstract class Human(int age, char sex, int coordinate, boolean alive){
 private class HumanCreator {
     public static Human createRandomHuman  (int age ,char sex ,int coordinate) { //нужно сделать 10 первых людей со случайными параметрами
         for (int i = 0; i <10; i++) {
-        Human = new
+        //Human randomhuman = new ???????????
 
         int age = new Random( int 65);
         char sex = new Random( char "m,w,p");
