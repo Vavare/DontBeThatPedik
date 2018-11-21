@@ -1,15 +1,16 @@
-import java.util.Random.*;
-import java.util.ArrayList;
+import java.util.*;
+import java.lang.*;
 
 
 
 class Universe {
     public static void main(String[] args) {
         for (int i = 0; i < 1000; i++) {
-            for (human : humans) {
+            for (human:
+                 humans) {
                 human.live();
-                    if(human.alive == false)
-                        DeadHumans.add(human);
+                if (human.alive == false)
+                    DeadHumans.add(human);
             }
 
             //нужно убрать всех DeadHumans
@@ -20,7 +21,10 @@ class Universe {
         }
 
     }
+  }
 
+
+}
 abstract class Human(int age, char sex, int coordinate, boolean alive){
 
         public int age;         //от 0 до 65
@@ -66,7 +70,7 @@ abstract class Human(int age, char sex, int coordinate, boolean alive){
           tryAlive();
 
     }
-    private void move() {
+    private int move() {
         switch (Random.nextInt(2)) {
             case 0:
                 coordinate--;
@@ -84,4 +88,20 @@ abstract class Human(int age, char sex, int coordinate, boolean alive){
 
     }
     }
-}
+
+class HumanCreator {
+    public static Human createRandomHuman < age , sex , coordinate> {
+        int age = new Random(int 65);
+        char sex = new Random(char "m,w,p");
+       int coordinate = new Random(int(Integer.MIN_VALUE, Integer.MAX_VALUE));
+        return null;
+    }
+
+
+    public static List<Human> createHumans() {
+        List<Human> humans = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            humans.add(createRandomHuman());
+        }
+        return null;
+    }
